@@ -17,11 +17,11 @@ webpush.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.priv
 // Should be stored in database and repulled for the push. But here hardcoded to simulate it
 const pushSubscription = 
 {
-    "endpoint": "https://fcm.googleapis.com/fcm/send/cIgytaNg-Kg:APA91bF9JQR5OtBV_8NEj9XNqZLxyxd2k43VhPQ1RBzf4oNcTulHUg2J5BT3ep7FYZH8dWQSEma9mYhsQVlVKhpemuWcIlyecK7v4B5Fh_ir3bXZXwpBg_E8vJVDwFBme6U-eMTQcQ2_",
+    "endpoint": "https://fcm.googleapis.com/fcm/send/eL_-P1wKezU:APA91bHjnWdEnMMymS8FNnfqohpnA8QkD0SDqHeOf1elpX1Hd0TcZo7qE7bZ7fIvbFSG-82YFT5gTH3tHCZ4rB-N2cQNgGNGG_9IzMLT5Q3pL0UA5BZZL4yFf9NRTl7LBONF1fWDP5uW",
     "expirationTime": null,
     "keys": {
-        "p256dh": "BNyqPYGibH9jqE5w254Y_0DNN7p8_Gdn1AbsvOiLTfJwUeUIHndOge3-vU4h6-1o5QgRdqDvqjjzysk13gaAvbA",
-        "auth": "r1jmzmAoECx8vW7-wRkwMA"
+        "p256dh": "BIOkNM2pgr3-XzcEGVd4_-nK-m7D2FvkQt3aGJqrQVQLMM7LafSxF0-tcs3WDINidxno35z2xTwUN46hvl1ikJk",
+        "auth": "-zrXw0ZMRFpY1zm8QBL4HA"
     }
 };
 
