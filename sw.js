@@ -28,22 +28,22 @@ self.addEventListener('push', function (e) {
     );
 });
 
-self.addEventListener('notificationclose', function (e) {
-    var notification = e.notification;
-    var primaryKey = notification.data.primaryKey;
+//self.addEventListener('notificationclose', function (e) {
+//    var notification = e.notification;
+//    var primaryKey = notification.data.primaryKey;
 
-    console.log('Closed notification: ' + primaryKey);
-});
+//    console.log('Closed notification: ' + primaryKey);
+//});
 
-self.addEventListener('notificationclick', function (e) {
-    var notification = e.notification;
-    var primaryKey = notification.data.primaryKey;
-    var action = e.action;
+//self.addEventListener('notificationclick', function (e) {
+//    var notification = e.notification;
+//    var primaryKey = notification.data.primaryKey;
+//    var action = e.action;
 
-    if (action === 'close') {
-        notification.close();
-    } else {
-        clients.openWindow('http://www.dmvh.eu');
-        notification.close();
-    }
-});
+//    if (action === 'close') {
+//        notification.close();
+//    } else {
+//        clients.openWindow('http://www.dmvh.eu');
+//        notification.close();
+//    }
+//});
