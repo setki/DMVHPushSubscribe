@@ -11,7 +11,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4193e0c5-f6ad-4528-8b33-91226fa7fa76</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,9 +29,15 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="server.js" />
+    <Content Include="index.html" />
+    <Content Include="sw.js" />
+    <Content Include="webpush.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="getkeys.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="push\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
