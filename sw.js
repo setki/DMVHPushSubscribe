@@ -1,11 +1,12 @@
 /* The Service Worker                                                                   */
+/*  It wil lhandle the subscribe                                                        */
 /* See : https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications   */
 /* ------------------------------------------------------------------------------------ */
 
 self.addEventListener('push', function (e) {
     var options = {
-        body: 'This notification was generated from a push!',
-        icon: 'images/DMVH-LOGO_400.jpg',
+        body: 'You will be subscribed to DMVH newsletter!',
+        icon: 'images/DMVH-ICO.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
@@ -13,16 +14,36 @@ self.addEventListener('push', function (e) {
         },
         actions: [
             {
-                action: 'explore', title: 'Subscribe',
-                icon: 'images/subscribe_128.jpg'
+                action: 'explore', title: 'Confirm',
+                icon: 'images/subscribe_128.png'
             },
             {
                 action: 'close', title: 'Close',
-                icon: 'images/ignore_128.jpg'
+                icon: 'images/ignore_128.png'
             },
         ]
     };
-    e.waitUntil(
-        self.registration.showNotification('Demo Push Notification', options)
+    e.waitUntil(    
+        self.registration.showNotification('DMVH Newsletter', options)
     );
+});
+
+self.addEventListener('notificationclose', function (e) {
+    var notification = e.notification;
+    var primaryKey = notification.data.primaryKey;
+
+    console.log('Closed notification: ' + primaryKey);
+});
+
+self.addEventListener('notificationclick', function (e) {
+    var notification = e.notification;
+    var primaryKey = notification.data.primaryKey;
+    var action = e.action;
+
+    if (action === 'close') {
+        notification.close();
+    } else {
+        clients.openWindow('http://www.dmvh.eu');
+        notification.close();
+    }
 });
