@@ -1,7 +1,7 @@
 {
-  "name": "dmvhpush-subscribe",
-  "version": "0.0.0",
-  "description": "DMVHPushSubscribe",
+  "name": "dmvhpushsubscribe",
+  "version": "1.0.0",
+  "description": "DMVH Push Subscribe demo",
   "author": "",
   "main": "index.js",
   "scripts": {

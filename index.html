@@ -11,7 +11,7 @@
 </head>
 <body>
     <h4>
-        <br />DMVH newsletter (v1.1): <button onclick="subscribe()">Subscribe</button>
+        <br />DMVH newsletter (v1.0): <button onclick="subscribe()">Subscribe</button>
     </h4>
 
     <!--  Subscribe action -->
@@ -24,16 +24,16 @@
             // with public key to glue the action to the server
             let push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
-                applicationServerKey: 'BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0'
+                applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
             });
             // the push should be stored to DB, contains the answer of user
             console.log(JSON.stringify(push));
         }
 
         /* ServiceWorker Creation to allow push*/
-        if ('serviceWorker' in navigator) {
-            addEventListener('load', async () => {
-                let sw = await navigator.serviceWorker.register('./sw.js');
+        if ("serviceWorker" in navigator) {
+            addEventListener("load", async () => {
+                let sw = await navigator.serviceWorker.register("./sw.js");
                 console.log(sw);
             });
         }
