@@ -5,7 +5,7 @@ const webpush = require("web-push");
 
 // VAPID keys should only be generated once.
 const vapidKeys = {
-    publicKey:  "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0",
+    publicKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0",
     privateKey: "ZpljSDgi6zbrOf2y5rgn3BpSXIDC5uuY0YY0ilhij_k"
 };
 
@@ -40,7 +40,7 @@ var wsauth = "5kFs4XHAFwCVYlPBYQ0cbA";
 
 //var res = encodeURI(uri);
 
-const pushSubscription = 
+const pushSubscription =
 {
     endpoint: wsuri,
     expirationTime: null,
@@ -51,21 +51,9 @@ const pushSubscription =
 
 };
 
-//const options = {
-//    vapidDetails: {
-//        subject: '< \'mailto\' Address or URL >',
-//        publicKey: '< URL Safe Base64 Encoded Public Key >',
-//        privateKey: '< URL Safe Base64 Encoded Private Key >'
-//    },
-//    timeout: <Number>
-//        TTL: <Number>,
-//            headers: {
-//                '< header name >': '< header value >'
-//  },
-//                    contentEncoding: '< Encoding type, e.g.: aesgcm or aes128gcm >',
-//                proxy: '< proxy server options >',
-//                    agent: '< https.Agent instance >'
-//}
+const options = {
+    headers: { "Access-Control-Allow-Origin": "*", "Content-Type": "Accept" }
+}
 
 
 
@@ -76,4 +64,4 @@ const pushSubscription =
 
 // The actual payload to push
 // Check permissions granted  TODO
-webpush.sendNotification(pushSubscription, 'Your Push Payload Text');
+webpush.sendNotification(pushSubscription, 'Your Push Payload Text', options);
