@@ -29,8 +29,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="images\DMVH-LOGO.jpg" />
-    <Content Include="images\DMVH-LOGO_400.jpg" />
+    <Content Include="images\dmvh_logo.jpg" />
+    <Content Include="images\dmvh_logo_1024.jpg" />
+    <Content Include="images\dmvh_logo_400.jpg" />
     <Content Include="images\dmvh_ico_blue.png" />
     <Content Include="images\dmvh_ico_orange.png" />
     <Content Include="images\ignore_128.png" />
