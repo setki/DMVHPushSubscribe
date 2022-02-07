@@ -33,7 +33,7 @@
         /* ServiceWorker Creation to allow push*/
         if ("serviceWorker" in navigator) {
             addEventListener("load", async () => {
-                let sw = await navigator.serviceWorker.register("./sw.js");
+                let sw = await navigator.serviceWorker.register("./scripts/sw.js");
                 console.log(sw);
             });
         }

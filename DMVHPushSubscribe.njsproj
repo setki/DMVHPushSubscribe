@@ -37,14 +37,15 @@
     <Content Include="images\ignore_128.png" />
     <Content Include="images\subscribe_128.png" />
     <Content Include="index.html" />
-    <Content Include="sw.js" />
-    <Content Include="webpush.js" />
+    <Content Include="scripts\sw.js" />
+    <Content Include="scripts\webpush.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="getkeys.js" />
+    <Content Include="scripts\getkeys.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
