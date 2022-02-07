@@ -23,7 +23,7 @@ self.addEventListener('push', function (e) {
             },
         ]
     };
-    e.waitUntil(    
+    e.waitUntil(
         self.registration.showNotification('DMVH Newsletter', options)
     );
 });
