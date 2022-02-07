@@ -6,7 +6,7 @@
 self.addEventListener('push', function (e) {
     var options = {
         body: 'You will be subscribed to DMVH newsletter!',
-        icon: 'images/DMVH-ICO.png',
+        icon: 'images/favicon-blue-128-128.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
@@ -15,7 +15,7 @@ self.addEventListener('push', function (e) {
         actions: [
             {
                 action: 'explore', title: 'Confirm',
-                icon: 'images/favicon-blue-128-128.png'
+                icon: 'images/subscribe_128.png'
             },
             {
                 action: 'close', title: 'Close',

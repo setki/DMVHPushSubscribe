@@ -16,21 +16,21 @@ webpush.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.priv
 // It is the data of push in index.html that returns the subscribe confirmation.
 // Should be stored in database and repulled for the push. But here hardcoded to simulate it
 const pushSubscription = 
-//{
-    //"endpoint": "https://fcm.googleapis.com/fcm/send/eL_-P1wKezU:APA91bHjnWdEnMMymS8FNnfqohpnA8QkD0SDqHeOf1elpX1Hd0TcZo7qE7bZ7fIvbFSG-82YFT5gTH3tHCZ4rB-N2cQNgGNGG_9IzMLT5Q3pL0UA5BZZL4yFf9NRTl7LBONF1fWDP5uW",
-    //"expirationTime": null,
-    //"keys": {
-    //    "p256dh": "BIOkNM2pgr3-XzcEGVd4_-nK-m7D2FvkQt3aGJqrQVQLMM7LafSxF0-tcs3WDINidxno35z2xTwUN46hvl1ikJk",
-    //    "auth": "-zrXw0ZMRFpY1zm8QBL4HA"
-    //}
-
     {
-    "endpoint": "https://fcm.googleapis.com/fcm/send/f_tFGwZ9lBY:APA91bHnsl-ML0mko8v8UCvY1DrIsndn_Ztamc7BUvAD8oScyF1zR6xmyZD6quu_-PLSX8bJxqFoIw6XStEE_QB1KscoYw4wTp_qglzvmwNEpZ0XrTo91DxANQHg1IvmD3WjooCc153x",
-        "expirationTime": null,
-            "keys": {
-        "p256dh": "BJcR3HMUYiQoIOMJbIuvW7hO8ReprkOa_I1rjqOjj5Jta3UViPU5bixMzoaxlVxcpjFwXciqVgrBKMtuddMh2Lk",
-            "auth": "7gy4jP_uXxVFuANl-SREMw"
+    "endpoint": "https://fcm.googleapis.com/fcm/send/eL_-P1wKezU:APA91bHjnWdEnMMymS8FNnfqohpnA8QkD0SDqHeOf1elpX1Hd0TcZo7qE7bZ7fIvbFSG-82YFT5gTH3tHCZ4rB-N2cQNgGNGG_9IzMLT5Q3pL0UA5BZZL4yFf9NRTl7LBONF1fWDP5uW",
+    "expirationTime": null,
+    "keys": {
+        "p256dh": "BIOkNM2pgr3-XzcEGVd4_-nK-m7D2FvkQt3aGJqrQVQLMM7LafSxF0-tcs3WDINidxno35z2xTwUN46hvl1ikJk",
+        "auth": "-zrXw0ZMRFpY1zm8QBL4HA"
     }
+
+    //{
+    //"endpoint": "https://fcm.googleapis.com/fcm/send/f_tFGwZ9lBY:APA91bHnsl-ML0mko8v8UCvY1DrIsndn_Ztamc7BUvAD8oScyF1zR6xmyZD6quu_-PLSX8bJxqFoIw6XStEE_QB1KscoYw4wTp_qglzvmwNEpZ0XrTo91DxANQHg1IvmD3WjooCc153x",
+    //    "expirationTime": null,
+    //        "keys": {
+    //    "p256dh": "BJcR3HMUYiQoIOMJbIuvW7hO8ReprkOa_I1rjqOjj5Jta3UViPU5bixMzoaxlVxcpjFwXciqVgrBKMtuddMh2Lk",
+    //        "auth": "7gy4jP_uXxVFuANl-SREMw"
+    //}
 
 };
 
