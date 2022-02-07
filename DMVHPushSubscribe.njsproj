@@ -29,6 +29,12 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\DMVH-LOGO.jpg" />
+    <Content Include="images\DMVH-LOGO_400.jpg" />
+    <Content Include="images\favicon-blue-128-128.png" />
+    <Content Include="images\favicon-orange-128-128.png" />
+    <Content Include="images\ignore_128.png" />
+    <Content Include="images\subscribe_128.png" />
     <Content Include="index.html" />
     <Content Include="sw.js" />
     <Content Include="webpush.js" />
@@ -37,7 +43,7 @@
     <Content Include="getkeys.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="push\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
