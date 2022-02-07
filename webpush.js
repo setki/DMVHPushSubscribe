@@ -17,15 +17,16 @@ webpush.setVapidDetails("mailto:st@dmvh.eu", vapidKeys.publicKey, vapidKeys.priv
 // Should be stored in database and repulled for the push. But here hardcoded to simulate it
 
 // Chrome ST
-//var wsuri  = "https://fcm.googleapis.com/fcm/send/fS5xRKzX54I:APA91bErfTrdKjrU6bLZxpWN53UULEPHWpaej5MlcBKnJbhx9fM6IhM_9R40h30CCRvURSFYuOXmVletJaYl6h2feUwK9zTg8Crl0tCdLZrkJHVoXKfHrnO_WOktIGql4c3VLKXQnBdi";
-//var wskey  = "BG17O1y7DhDbrCk43zGa2qSXNtt7PijNhMNWlHxzFp-Ck8Cl3sp6gjwcQp9U-Pex8iRhg89pgbEmbbvwcJkanFU";
-//var wsauth = "H4DfHTPtjMT7WW7ysDiuOA";
+//var wsuri = "https://fcm.googleapis.com/fcm/send/fAyGZA5rqKE:APA91bEUrsn4wJGXovbCKnJQi8nSviGOaLsr4TFTLqN1s9Uud-jF4ArgCo5Tm0jdRUpdxUSN0QZC2tShQ5etuBEVkS6ARFIk5jiDdl-0H63pP-_xK6SNGZ04NDOv-Hepx74ymqfc9qRZ";
+//var wskey = "BMSiW8MPqXFQduJHiY6tJ5VTEe2z7wtL1QYObGIw13iG2lreI-Esz7muX-0xXUY8kGUA-cOEKhgSfIBs8LEmLBw";
+//var wsauth = "j8z3hcZBLH1MUcnlskswHw";
 
 
 // Edge ST  (OK)
-var wsuri   = "https://wns2-db5p.notify.windows.com/w/?token=BQYAAACFrSzZWfLQI3wNO94SF0VN89ILfve7VDDJ9WXT3f7%2fA113%2f5V%2fxTvK2SDn%2b3luqv8XeIAiBwB1ge9K6ytnrYO0cQyzzAlYH1XFe%2bpLselLgtpCM8U0DYXDVMxKmlQGRf51Yur5jVexpuHnl0jkcyAa1%2fPc58SSR2RU%2bKUXHrCAUCZtvZ0W7cbZ5jbLuxxibaMR2ES5ZBDz02ZcMeUPhkTBCgNyY7u9xtEmHXfUGRQtX3rpcAKCCpYeEGp6m1Q91QXNOTI%2bx9C7SFnCubHPsUgozKlVNzjmKJ4XCFWtqq4oUcHH5sE6x696I44P1FdYoGWeWsrwPqT62tR4er7xbcVt";
-var wskey   = "BL8DqMxQ4dHM6X9B71iU4tcGV7ArTW0gVneMTqKXpzbGTCHpXGKEvLShCtLCyH7Ur14N60wf--tQGeoXLvFo4WE";
-var wsauth  = "4YHRcd5BBz8fRqasroCszw";
+var wsuri = "https://wns2-db5p.notify.windows.com/w/?token=BQYAAACrD68HY87CaurpP3hG%2f4AGbCFdQzaszQREMkCjBvLL9C8U1bP7torzeEW4qAhsFMsc%2bn2Ica0ofn9URwQpbntSslD14zdhyGrKYCtZO%2fXDZ%2fKTPJnYc7hKEBG6Jw0vyjQ4n%2bOmqMDDylULR5VtkFAsC9UJPz7qOCi4OnovwblICyt0UcnFhoesR5RQE1noYyDwhNmcQ6KP0uElroDKDj%2f9uOXyoC6pvt0nqzROo3KoUQe85MpvRsGMxcJ8l0RBudYmAPui%2faxiGKLFgqS6YYA0Es%2bnnGAOEwrSs0mU1rkcJClP9ZmIdoXWt500iAEFe4lYIgteCks1MfWJLZg2nZG5";
+var wskey = "BGwh_SWvJT6H4jCA7qFwG1nTUzYMVd33mCgLiRfkNxXP0S2bA9JX7XDlOftNo_YMwOjrmLvc4DoHHnp4wV3bTUw";
+var wsauth = "5kFs4XHAFwCVYlPBYQ0cbA";
+
 
 // Explorer CP
 //var wsuri  = "https://fcm.googleapis.com/fcm/send/f_tFGwZ9lBY:APA91bHnsl-ML0mko8v8UCvY1DrIsndn_Ztamc7BUvAD8oScyF1zR6xmyZD6quu_-PLSX8bJxqFoIw6XStEE_QB1KscoYw4wTp_qglzvmwNEpZ0XrTo91DxANQHg1IvmD3WjooCc153x";
@@ -50,6 +51,29 @@ const pushSubscription =
 
 };
 
+//const options = {
+//    vapidDetails: {
+//        subject: '< \'mailto\' Address or URL >',
+//        publicKey: '< URL Safe Base64 Encoded Public Key >',
+//        privateKey: '< URL Safe Base64 Encoded Private Key >'
+//    },
+//    timeout: <Number>
+//        TTL: <Number>,
+//            headers: {
+//                '< header name >': '< header value >'
+//  },
+//                    contentEncoding: '< Encoding type, e.g.: aesgcm or aes128gcm >',
+//                proxy: '< proxy server options >',
+//                    agent: '< https.Agent instance >'
+//}
+
+
+
+//webpush.registration.pushManager.subscribe({
+//    userVisibleOnly: true,
+//    applicationServerKey: vapidKeys.publicKey
+//});
+
 // The actual payload to push
 // Check permissions granted  TODO
-webpush.sendNotification(pushSubscription, "ST Push Info");
+webpush.sendNotification(pushSubscription, 'Your Push Payload Text');
