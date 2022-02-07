@@ -3,7 +3,7 @@
 
 const webpush = require("web-push");
 
-// VAPID keys should only be generated only once.
+// VAPID keys should only be generated once.
 const vapidKeys = {
     publicKey:  "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0",
     privateKey: "ZpljSDgi6zbrOf2y5rgn3BpSXIDC5uuY0YY0ilhij_k"
@@ -17,15 +17,15 @@ webpush.setVapidDetails("mailto:st@dmvh.eu", vapidKeys.publicKey, vapidKeys.priv
 // Should be stored in database and repulled for the push. But here hardcoded to simulate it
 
 // Chrome ST
-var wsuri  = "https://fcm.googleapis.com/fcm/send/fS5xRKzX54I:APA91bErfTrdKjrU6bLZxpWN53UULEPHWpaej5MlcBKnJbhx9fM6IhM_9R40h30CCRvURSFYuOXmVletJaYl6h2feUwK9zTg8Crl0tCdLZrkJHVoXKfHrnO_WOktIGql4c3VLKXQnBdi";
-var wskey  = "BG17O1y7DhDbrCk43zGa2qSXNtt7PijNhMNWlHxzFp-Ck8Cl3sp6gjwcQp9U-Pex8iRhg89pgbEmbbvwcJkanFU";
-var wsauth = "H4DfHTPtjMT7WW7ysDiuOA";
+//var wsuri  = "https://fcm.googleapis.com/fcm/send/fS5xRKzX54I:APA91bErfTrdKjrU6bLZxpWN53UULEPHWpaej5MlcBKnJbhx9fM6IhM_9R40h30CCRvURSFYuOXmVletJaYl6h2feUwK9zTg8Crl0tCdLZrkJHVoXKfHrnO_WOktIGql4c3VLKXQnBdi";
+//var wskey  = "BG17O1y7DhDbrCk43zGa2qSXNtt7PijNhMNWlHxzFp-Ck8Cl3sp6gjwcQp9U-Pex8iRhg89pgbEmbbvwcJkanFU";
+//var wsauth = "H4DfHTPtjMT7WW7ysDiuOA";
 
 
 // Edge ST  (OK)
-//var wsuri   = "https://wns2-db5p.notify.windows.com/w/?token=BQYAAACFrSzZWfLQI3wNO94SF0VN89ILfve7VDDJ9WXT3f7%2fA113%2f5V%2fxTvK2SDn%2b3luqv8XeIAiBwB1ge9K6ytnrYO0cQyzzAlYH1XFe%2bpLselLgtpCM8U0DYXDVMxKmlQGRf51Yur5jVexpuHnl0jkcyAa1%2fPc58SSR2RU%2bKUXHrCAUCZtvZ0W7cbZ5jbLuxxibaMR2ES5ZBDz02ZcMeUPhkTBCgNyY7u9xtEmHXfUGRQtX3rpcAKCCpYeEGp6m1Q91QXNOTI%2bx9C7SFnCubHPsUgozKlVNzjmKJ4XCFWtqq4oUcHH5sE6x696I44P1FdYoGWeWsrwPqT62tR4er7xbcVt";
-//var wskey   = "BL8DqMxQ4dHM6X9B71iU4tcGV7ArTW0gVneMTqKXpzbGTCHpXGKEvLShCtLCyH7Ur14N60wf--tQGeoXLvFo4WE";
-//var wsauth  = "4YHRcd5BBz8fRqasroCszw";
+var wsuri   = "https://wns2-db5p.notify.windows.com/w/?token=BQYAAACFrSzZWfLQI3wNO94SF0VN89ILfve7VDDJ9WXT3f7%2fA113%2f5V%2fxTvK2SDn%2b3luqv8XeIAiBwB1ge9K6ytnrYO0cQyzzAlYH1XFe%2bpLselLgtpCM8U0DYXDVMxKmlQGRf51Yur5jVexpuHnl0jkcyAa1%2fPc58SSR2RU%2bKUXHrCAUCZtvZ0W7cbZ5jbLuxxibaMR2ES5ZBDz02ZcMeUPhkTBCgNyY7u9xtEmHXfUGRQtX3rpcAKCCpYeEGp6m1Q91QXNOTI%2bx9C7SFnCubHPsUgozKlVNzjmKJ4XCFWtqq4oUcHH5sE6x696I44P1FdYoGWeWsrwPqT62tR4er7xbcVt";
+var wskey   = "BL8DqMxQ4dHM6X9B71iU4tcGV7ArTW0gVneMTqKXpzbGTCHpXGKEvLShCtLCyH7Ur14N60wf--tQGeoXLvFo4WE";
+var wsauth  = "4YHRcd5BBz8fRqasroCszw";
 
 // Explorer CP
 //var wsuri  = "https://fcm.googleapis.com/fcm/send/f_tFGwZ9lBY:APA91bHnsl-ML0mko8v8UCvY1DrIsndn_Ztamc7BUvAD8oScyF1zR6xmyZD6quu_-PLSX8bJxqFoIw6XStEE_QB1KscoYw4wTp_qglzvmwNEpZ0XrTo91DxANQHg1IvmD3WjooCc153x";
