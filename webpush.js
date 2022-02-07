@@ -16,7 +16,8 @@ webpush.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.priv
 // It is the data of push in index.html that returns the subscribe confirmation.
 // Should be stored in database and repulled for the push. But here hardcoded to simulate it
 const pushSubscription = 
-    //{
+{
+
     //"endpoint": "https://fcm.googleapis.com/fcm/send/eL_-P1wKezU:APA91bHjnWdEnMMymS8FNnfqohpnA8QkD0SDqHeOf1elpX1Hd0TcZo7qE7bZ7fIvbFSG-82YFT5gTH3tHCZ4rB-N2cQNgGNGG_9IzMLT5Q3pL0UA5BZZL4yFf9NRTl7LBONF1fWDP5uW",
     //"expirationTime": null,
     //"keys": {
@@ -24,12 +25,11 @@ const pushSubscription =
     //    "auth": "-zrXw0ZMRFpY1zm8QBL4HA"
     //}
 
-    {
-    "endpoint": "https://fcm.googleapis.com/fcm/send/eL_-P1wKezU:APA91bHjnWdEnMMymS8FNnfqohpnA8QkD0SDqHeOf1elpX1Hd0TcZo7qE7bZ7fIvbFSG-82YFT5gTH3tHCZ4rB-N2cQNgGNGG_9IzMLT5Q3pL0UA5BZZL4yFf9NRTl7LBONF1fWDP5uW",
-        "expirationTime": null,
-        "keys": {
-            "p256dh": "BIOkNM2pgr3-XzcEGVd4_-nK-m7D2FvkQt3aGJqrQVQLMM7LafSxF0-tcs3WDINidxno35z2xTwUN46hvl1ikJk",
-                "auth": "-zrXw0ZMRFpY1zm8QBL4HA"
+    "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABh_…4KMkvkwYq005NVsq15rg4PSvLdKl3r6VV6oupdHwrWJB8bFN7fl_UjM3BX18",
+    "expirationTime": null,
+    "keys": {
+        "auth": "K7rRDSumFSKN7bGaj345TA",
+        "p256dh": "BDw3j-CUVMZXsH3SLZhDHVXEXQC4h2SZ_iEwcY95g-dUik3-0s22QmaJQf3GfDDdVIMFqROWZEMIc5F4bjk0F8M"
     }
 
     //{
