@@ -15,7 +15,7 @@ self.addEventListener('push', function (e) {
         actions: [
             {
                 action: 'explore', title: 'Confirm',
-                icon: 'images/subscribe_128.png'
+                icon: 'images/favicon-blue-128-128.png'
             },
             {
                 action: 'close', title: 'Close',
