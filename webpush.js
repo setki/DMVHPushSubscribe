@@ -10,7 +10,7 @@ const vapidKeys = {
 };
 
 // Set Push Notification Security
-webpush.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.privateKey);
+webpush.setVapidDetails("mailto:st@dmvh.eu", vapidKeys.publicKey, vapidKeys.privateKey);
 
 // This is the same output of calling JSON.stringify on a PushSubscription
 // It is the data of push in index.html that returns the subscribe confirmation.
