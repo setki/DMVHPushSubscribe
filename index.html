@@ -16,27 +16,31 @@
 
     <!--  Subscribe action -->
     <script>
+
+        // 
         async function subscribe() {
 
+            // Subscribe to the push manager to create the interface popup
+            // Public key let the action connect to the server
+            // --------------------------------------------------------------
             let sw = await navigator.serviceWorker.ready;   // When Chrome => Google
-
-            // Make the push manager to create the interface popup
-            // with public key to glue the action to the server
             let push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
                 applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
             });
-            // the push should be stored to DB, contains the answer of user
+
+            // The push returns the answer of user and should be stored to your DB
             console.log(JSON.stringify(push));
         }
 
-        /* ServiceWorker Creation to allow push*/
-        if ("serviceWorker" in navigator) {
-            addEventListener("load", async () => {
-                let sw = await navigator.serviceWorker.register("./serviceworker.js");
+        // Activate the ServiceWorker to allow push even when not online
+        // --------------------------------------------------------------
+        //if ("serviceWorker" in navigator) {
+            addEventListener('load', async () => {
+                let sw = await navigator.serviceWorker.register('./serviceworker.js');
                 console.log(sw);
             });
-        }
+        //}
     </script>
 
 </body>
