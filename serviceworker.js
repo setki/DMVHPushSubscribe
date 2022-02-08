@@ -13,8 +13,8 @@ self.addEventListener('push', function(event) {
 
     var options = {
         body: 'You are subscribed to DMVH newsletter',
-        icon: 'images/dmvh_ico_blue.png',
-        img: 'images/dmvh_logo_1024.jpg',
+        //icon: 'images/dmvh_ico_blue.png',
+        //img: 'images/dmvh_logo_1024.jpg',
         //tag: 'new message',
         //badge: 'images/dmvh_ico_orange.png',
         vibrate: [100, 50, 100],
@@ -25,13 +25,13 @@ self.addEventListener('push', function(event) {
         actions: [
             {
                 action: 'explore',
-                title: 'See Archive',
-                icon: 'images/subscribe_128.png'
+                //icon: 'images/subscribe_128.png',
+                title: 'See Archive'
             },
             {
                 action: 'close',
-                title: 'Close',
-                icon: 'images/ignore_128.png'
+                //icon: 'images/ignore_128.png',
+                title: 'Close'
             },
         ]
     };
