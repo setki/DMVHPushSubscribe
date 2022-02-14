@@ -23,9 +23,14 @@ push.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.private
 //let wsauth = "clOB5U7V6gWGwCZBvG9ong";
 
 
-let wsuri = "https://fcm.googleapis.com/fcm/send/cPqnOBRUmcg:APA91bHXI7Dwra3SryL0s_jTlQ7dB9-vTRQU9U_tzu7AcD1G_ZWxqQMVRFpupbBqmgzYleCBvXeOSMtnoP54451d9gnCDtPN0T1SGMzhDZRaX747blRbS636A7t6hC1lkFYDprVkxIEY";
-let wskey = "BO4Njmkv9vjLr4a945LBkbW8har-nT7avbWv4R5lIm-cNxS-AX2wiam3ymX7NOTVudk7NnuoasUJ35LFmLYVbFc";
-let wsauth = "mwZyzTgk4H2aFOpjU12eTw";
+//let wsuri = "https://fcm.googleapis.com/fcm/send/cPqnOBRUmcg:APA91bHXI7Dwra3SryL0s_jTlQ7dB9-vTRQU9U_tzu7AcD1G_ZWxqQMVRFpupbBqmgzYleCBvXeOSMtnoP54451d9gnCDtPN0T1SGMzhDZRaX747blRbS636A7t6hC1lkFYDprVkxIEY";
+//let wskey = "BO4Njmkv9vjLr4a945LBkbW8har-nT7avbWv4R5lIm-cNxS-AX2wiam3ymX7NOTVudk7NnuoasUJ35LFmLYVbFc";
+//let wsauth = "mwZyzTgk4H2aFOpjU12eTw";
+
+// Chrome on Android
+let wsuri = "https://fcm.googleapis.com/fcm/send/fDjktWGwFAc:APA91bFJhssk_gwJ5n7alLK7HgDckZyKg1JVtkMppP8pIzwpDXGMaH4F5Bz5FqVifqZIYGG5Vw7O4Falg6BMEiWRGPHqtn5scQao7OCMueaZmahISnViMd0Opt8oJWMacpIBGU5PQttB";
+let wskey = "BC6qjH1vDA51QcPQw2t-8YtrciI36v5n0bW1aAtzjWT-eQHlQ6qKADToba09odjtcBbYQaBU3yJohg2TEHN-cCQ";
+let wsauth = "6gXodiWhQ1O4y0mRXjGoDA";
 
 // Chrome ST @ home
 //let wsuri = "https://fcm.googleapis.com/fcm/send/dq4VVkFiGpE:APA91bEzJKpHFpGJkcPig82AIq-oAarRHN6aA2ondrqbDHlkNQgUs5dXBnGqvLOrQZfbxvNR9NNhVITR5Yy0gKJWOPY1CtWLzAVjh4EbmvLA-jVqkIoiIPqD-PYGRRLssgVHxgv2kkua";

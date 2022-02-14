@@ -84,7 +84,10 @@
             // Subscribe to the push manager to create the interface popup
             // Public key let the action connect to the server
             // --------------------------------------------------------------
+            console.log(navigator);
+
             let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
+            console.log(sw);
             let push = await sw.pushManager.subscribe({
                 userVisibleOnly: true,
                 applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
