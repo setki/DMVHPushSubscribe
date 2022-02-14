@@ -72,9 +72,9 @@
             // Public key let the action connect to the server
             // --------------------------------------------------------------
 
+                console.log(window);
             if ('safari' in window && 'pushNotification' in window.safari) {
                 console.log("In Safari");
-                console.log(window);
 
             }
             let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
