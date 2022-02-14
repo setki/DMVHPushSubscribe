@@ -38,13 +38,14 @@
     <Content Include="images\subscribe_128.png" />
     <Content Include="index.html" />
     <Content Include="serviceworker.js" />
+    <Content Include="tools\getkeys.js" />
     <Content Include="webpush.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="getkeys.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+    <Folder Include="tools\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
