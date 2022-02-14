@@ -72,8 +72,8 @@
             // Public key let the action connect to the server
             // --------------------------------------------------------------
 
-                console.log(window);
-            if ('safari' in window && 'pushNotification' in window.safari) {
+            console.log(navigator.userAgent.toLowerCase());
+            if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
                 console.log("In Safari");
 
             }
