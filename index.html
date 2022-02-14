@@ -75,6 +75,7 @@
             console.log(navigator.userAgent.toLowerCase());
             if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
                 console.log("In Safari");
+                console.log(window.safari);
 
             }
             let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
