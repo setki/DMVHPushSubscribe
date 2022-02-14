@@ -8,11 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DMVH Subscribe action</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
 </head>
 <body>
     <h4>
         <br />DMVH newsletter (v1.2): <button onclick="subscribe()">Subscribe</button>
     </h4>
+
+
+    <!--<div class="output"></div>
+    <script language="javascript">
+        var realConsoleLog = console.log;
+        console.log = function () {
+            var message = [].join.call(arguments, " ");
+            $(".output").text(message);
+            realConsoleLog.apply(console, arguments);
+        };
+        console.log("hello", "my", "name", "is", "shantharuban");
+    </script>-->
+
+
+    <hr />
 
     <h4>This Browsers Subscription</h4>
     <p>Below is your current subscription.</p>
@@ -22,7 +40,8 @@
 
     <h4>Supported Content Encodings </h4>
     <p>A change to the web push spec moves browsers from "aesgcm" to "aes128gcm" content encoding.</p>
-    <p>To determine which is supported the current browser you can view
+    <p>
+        To determine which is supported the current browser you can view
         <code>PushManager.supportedContentEncodings</code>.
     </p>
     <p>Below is the list of supported encodings.</p>
@@ -39,7 +58,8 @@
     <div class="js-api-request">
         <hr />
         <h4>Push from a Server</h4>
-        <p>To send a push message to this page, you need to make a network request from your server with 
+        <p>
+            To send a push message to this page, you need to make a network request from your server with
             the following pieces of info (this is essentially a breakdown of the CURL command above):
         </p>
         <h5>Endpoint URL</h5>
@@ -53,7 +73,6 @@
         <p class="small-margin"><strong>Type</strong>: <span class="js-body-format"></span></p>
         <p class="small-margin"><strong>Content</strong>: <span class="js-body-content"></span></p>
         <hr />
-
     </div>
 
     <!--  Subscribe action -->
