@@ -13,7 +13,7 @@
     <!-- Script for Mobile debugging -->
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
-    
+
 </head>
 <body>
     <h4>
@@ -37,6 +37,7 @@
             // --------------------------------------------------------------
 
             console.log(navigator.userAgent.toLowerCase());
+            console.log(navigator);
             if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
                 let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
                 let push = await sw.pushManager.subscribe({
@@ -44,7 +45,7 @@
                     applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
                 });
 
-                let dataName    = document.querySelector("#dataName");
+                let dataName = document.querySelector("#dataName");
                 let dataBrowser = document.querySelector("#dataBrowser");
                 // The subscribe push returns the answer of user and should be stored to your DB
                 // In the Push there is the Webserive Uri, the Key and Authorisation id
@@ -56,8 +57,9 @@
                 console.log("-----------------------------------------------------------------");
             } else {
                 console.log("-----------------------------------------------------------------");
-                console.log("In Safari. Still an issue...");
+                console.log("In Safari. Still an issue... See https://www.izooto.com/blog/ios-safari-push-notifications-in-2022");
                 console.log("-----------------------------------------------------------------");
+
             }
 
         }
@@ -69,12 +71,11 @@
             let sw = await navigator.serviceWorker.register('./serviceworker.js');
             console.log("-----------------------------------------------------------------");
             console.log(">> Registered to Service worker");
-            console.log("sw = " + sw);
             console.log("-----------------------------------------------------------------");
         });
-            //}
+                //}
     </script>
 
 </body>
- 
+
 </html>
