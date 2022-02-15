@@ -22,24 +22,37 @@
 
     <hr />
 
-    <h4>This Browsers Subscription</h4>
-    <input class="sp_push_custom_data" type="hidden" name="dataName" id="dataName" value="Do you see my name">
-    <input class="sp_push_custom_data" type="hidden" name="dataBrowser" id="dataBrowser" value="This might be a Chrome">
+    <h4>This is a small demo for Push Norifications</h4>
+    - Setting up a Worker Service</br>
+    - Subscribing to that Worker Service</br>
+    - Using a Push script to show a notification</br>
+    - Not working for Safari</br>
+    - Tested on Chrome, Edge, FrieFox, Brave and Vivaldi (Windows) &Aacute; Chrome Android</br>
+       
+    <input type="hidden" name="dataName" id="dataName" value="Do you see my name?">
+    <input type="hidden" name="dataBrowser" id="dataBrowser" value="This might be a Chrome">
 
     <!--  Subscribe action -->
     <script>
 
-        //
         async function subscribe() {
 
             // Subscribe to the push manager to create the interface popup
             // Public key let the action connect to the server
             // --------------------------------------------------------------
+            console.log("Detected Agent : " + navigator.userAgent.toLowerCase());
+            console.log("Navigator info : " + navigator);
+            let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
 
-            console.log(navigator.userAgent.toLowerCase());
-            console.log(navigator);
-            if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
-                let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
+            //if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
+            if ("safari" in window && "'pushNotification" in window.safari) {
+
+                console.log("-----------------------------------------------------------------");
+                console.log("You are using Safari. Sorry... ");
+                console.log("See documentation for more info https://app.clickup.com/20451750/v/dc/kg4d6-4121/kg4d6-11741 ");
+                console.log("-----------------------------------------------------------------");
+
+            } else {
                 let push = await sw.pushManager.subscribe({
                     userVisibleOnly: true,
                     applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
@@ -55,11 +68,6 @@
                 console.log("Name    = " + dataName.value);
                 console.log("Browser = " + dataBrowser.value);
                 console.log("-----------------------------------------------------------------");
-            } else {
-                console.log("-----------------------------------------------------------------");
-                console.log("In Safari. Still an issue... See https://www.izooto.com/blog/ios-safari-push-notifications-in-2022");
-                console.log("-----------------------------------------------------------------");
-
             }
 
         }
@@ -73,7 +81,7 @@
             console.log(">> Registered to Service worker");
             console.log("-----------------------------------------------------------------");
         });
-                //}
+                            //}
     </script>
 
 </body>

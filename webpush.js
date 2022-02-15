@@ -32,11 +32,15 @@ push.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.private
 //let wskey = "BC6qjH1vDA51QcPQw2t-8YtrciI36v5n0bW1aAtzjWT-eQHlQ6qKADToba09odjtcBbYQaBU3yJohg2TEHN-cCQ";
 //let wsauth = "6gXodiWhQ1O4y0mRXjGoDA";
 
+// Vivaldi  ST
+//let wsuri = "https://fcm.googleapis.com/fcm/send/fMuAcgWiWw8:APA91bFe0zOCjfQaCg0UPX-x_EQ68B5AC5Hx1e3foA2TLkq40joOoG2PSgFpsRdPRTSIDjXPdZzXw6my6kZN0JlzutMroFF_aJqPjDvyKV7kfccR22HUkePKemFWEMk9rqUAy_p0JQHC";
+//let wskey = "BOBh4YEe8oX7mFMmRILJJpEH2nDYRteZ3DOxVB70lYMxXmUHs4iLs-Bxhv3vfY_6XezATIaOJmbisByANk36Xdw";
+//let wsauth = "VoavEDshPDG5hqsqpNXIZA";
 
-// Vivaldi
-let wsuri = "https://fcm.googleapis.com/fcm/send/fMuAcgWiWw8:APA91bFe0zOCjfQaCg0UPX-x_EQ68B5AC5Hx1e3foA2TLkq40joOoG2PSgFpsRdPRTSIDjXPdZzXw6my6kZN0JlzutMroFF_aJqPjDvyKV7kfccR22HUkePKemFWEMk9rqUAy_p0JQHC";
-let wskey = "BOBh4YEe8oX7mFMmRILJJpEH2nDYRteZ3DOxVB70lYMxXmUHs4iLs-Bxhv3vfY_6XezATIaOJmbisByANk36Xdw";
-let wsauth = "VoavEDshPDG5hqsqpNXIZA";
+// Chrome Canzu
+let wsuri = "https://fcm.googleapis.com/fcm/send/f_tFGwZ9lBY:APA91bHnsl-ML0mko8v8UCvY1DrIsndn_Ztamc7BUvAD8oScyF1zR6xmyZD6quu_-PLSX8bJxqFoIw6XStEE_QB1KscoYw4wTp_qglzvmwNEpZ0XrTo91DxANQHg1IvmD3WjooCc153x";
+let wskey = "BJcR3HMUYiQoIOMJbIuvW7hO8ReprkOa_I1rjqOjj5Jta3UViPU5bixMzoaxlVxcpjFwXciqVgrBKMtuddMh2Lk";
+let wsauth = "7gy4jP_uXxVFuANl-SREMw";
 
 
 // Chrome ST @ home
