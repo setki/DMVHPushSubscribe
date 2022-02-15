@@ -9,8 +9,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DMVH Subscribe action</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Script for Mobile debugging -->
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
+    <!-- Script for push extra data -->
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            oSpP.push("Name", "Do you see my name");
+            oSpP.push("Browser", "This might be a Chrome");
+        }); 
+    </script>
+
 </head>
 <body>
     <h4>
@@ -74,18 +83,17 @@
 
             console.log(navigator.userAgent.toLowerCase());
             if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
-                console.log("In Safari");
-                console.log(window.safari);
-
+                console.log("In Safari. Still an issue...");
+            } else {
+                let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
+                let push = await sw.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
+                });
+                // The push returns the answer of user and should be stored to your DB
+                console.log(JSON.stringify(push));
             }
-            let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
-            let push = await sw.pushManager.subscribe({
-                userVisibleOnly: true,
-                applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
-            });
 
-            // The push returns the answer of user and should be stored to your DB
-            console.log(JSON.stringify(push));
         }
 
         // Activate the ServiceWorker to allow push even when not online
@@ -98,28 +106,6 @@
         //}
     </script>
 
-    <script src="snippets.js"></script>
-
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-77119321-2', 'auto');
-        ga('send', 'pageview');
-        ga(function (tracker) {
-            var clientId = tracker.get('clientId');
-            idbKeyval.set('google-analytics-client-id', clientId)
-                .catch(function (err) {
-                    console.error('Unable to track Google Analytics with Client ID.');
-                    console.error(err);
-                });
-        });
-    </script>
-
 </body>
-  
-  
+ 
 </html>

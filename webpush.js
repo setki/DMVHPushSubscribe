@@ -28,9 +28,16 @@ push.setVapidDetails('mailto:st@dmvh.eu', vapidKeys.publicKey, vapidKeys.private
 //let wsauth = "mwZyzTgk4H2aFOpjU12eTw";
 
 // Chrome on Android
-let wsuri = "https://fcm.googleapis.com/fcm/send/fDjktWGwFAc:APA91bFJhssk_gwJ5n7alLK7HgDckZyKg1JVtkMppP8pIzwpDXGMaH4F5Bz5FqVifqZIYGG5Vw7O4Falg6BMEiWRGPHqtn5scQao7OCMueaZmahISnViMd0Opt8oJWMacpIBGU5PQttB";
-let wskey = "BC6qjH1vDA51QcPQw2t-8YtrciI36v5n0bW1aAtzjWT-eQHlQ6qKADToba09odjtcBbYQaBU3yJohg2TEHN-cCQ";
-let wsauth = "6gXodiWhQ1O4y0mRXjGoDA";
+//let wsuri = "https://fcm.googleapis.com/fcm/send/fDjktWGwFAc:APA91bFJhssk_gwJ5n7alLK7HgDckZyKg1JVtkMppP8pIzwpDXGMaH4F5Bz5FqVifqZIYGG5Vw7O4Falg6BMEiWRGPHqtn5scQao7OCMueaZmahISnViMd0Opt8oJWMacpIBGU5PQttB";
+//let wskey = "BC6qjH1vDA51QcPQw2t-8YtrciI36v5n0bW1aAtzjWT-eQHlQ6qKADToba09odjtcBbYQaBU3yJohg2TEHN-cCQ";
+//let wsauth = "6gXodiWhQ1O4y0mRXjGoDA";
+
+
+// Vivaldi
+let wsuri = "https://fcm.googleapis.com/fcm/send/fMuAcgWiWw8:APA91bFe0zOCjfQaCg0UPX-x_EQ68B5AC5Hx1e3foA2TLkq40joOoG2PSgFpsRdPRTSIDjXPdZzXw6my6kZN0JlzutMroFF_aJqPjDvyKV7kfccR22HUkePKemFWEMk9rqUAy_p0JQHC";
+let wskey = "BOBh4YEe8oX7mFMmRILJJpEH2nDYRteZ3DOxVB70lYMxXmUHs4iLs-Bxhv3vfY_6XezATIaOJmbisByANk36Xdw";
+let wsauth = "VoavEDshPDG5hqsqpNXIZA";
+
 
 // Chrome ST @ home
 //let wsuri = "https://fcm.googleapis.com/fcm/send/dq4VVkFiGpE:APA91bEzJKpHFpGJkcPig82AIq-oAarRHN6aA2ondrqbDHlkNQgUs5dXBnGqvLOrQZfbxvNR9NNhVITR5Yy0gKJWOPY1CtWLzAVjh4EbmvLA-jVqkIoiIPqD-PYGRRLssgVHxgv2kkua";
