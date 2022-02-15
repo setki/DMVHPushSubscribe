@@ -23,7 +23,7 @@
 </head>
 <body>
     <h4>
-        <br />DMVH newsletter (v1.3): <button onclick="subscribe()">Subscribe</button>
+        <br />DMVH newsletter (v2.0): <button onclick="subscribe()">Subscribe</button>
     </h4>
 
     <hr />
@@ -83,8 +83,6 @@
 
             console.log(navigator.userAgent.toLowerCase());
             if (navigator.userAgent.toLowerCase().indexOf("safari/") !== -1) {
-                console.log("In Safari. Still an issue...");
-            } else {
                 let sw = await navigator.serviceWorker.ready;   // eg: Chrome => Google
                 let push = await sw.pushManager.subscribe({
                     userVisibleOnly: true,
@@ -92,6 +90,8 @@
                 });
                 // The push returns the answer of user and should be stored to your DB
                 console.log(JSON.stringify(push));
+            } else {
+                console.log("In Safari. Still an issue...");
             }
 
         }
