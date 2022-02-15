@@ -13,7 +13,7 @@
     <!-- Script for Mobile debugging -->
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
-
+    
 </head>
 <body>
     <h4>
@@ -44,6 +44,8 @@
                     applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
                 });
 
+                let dataName    = document.querySelector("#dataName");
+                let dataBrowser = document.querySelector("#dataBrowser");
                 // The subscribe push returns the answer of user and should be stored to your DB
                 // In the Push there is the Webserive Uri, the Key and Authorisation id
                 // Send extra data also to the database, like userid, browser, envrionment etc....
