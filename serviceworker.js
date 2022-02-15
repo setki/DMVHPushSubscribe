@@ -5,6 +5,9 @@
 
 self.addEventListener('push', function(event) {
 
+    // Below is with hard coded data, but normally should be based by Event
+    // Some parms are not common for all!
+    // ---------------------------------------------------------------------------
     //if (event.data) {
     //    bodytxt = event.data.text();
     //} else {

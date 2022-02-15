@@ -9,16 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DMVH Subscribe action</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- Script for Mobile debugging -->
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
-    <!-- Script for push extra data -->
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-            oSpP.push("Name", "Do you see my name");
-            oSpP.push("Browser", "This might be a Chrome");
-        }); 
-    </script>
 
 </head>
 <body>
@@ -29,47 +23,8 @@
     <hr />
 
     <h4>This Browsers Subscription</h4>
-    <p>Below is your current subscription.</p>
-    <pre class="snippet-code"><code class="code-example js-subscription-json language-json"></code></pre>
-
-    <hr />
-
-    <h4>Supported Content Encodings </h4>
-    <p>A change to the web push spec moves browsers from "aesgcm" to "aes128gcm" content encoding.</p>
-    <p>
-        To determine which is supported the current browser you can view
-        <code>PushManager.supportedContentEncodings</code>.
-    </p>
-    <p>Below is the list of supported encodings.</p>
-    <pre class="snippet-code"><code class="code-example js-supported-content-encodings language-json"></code></pre>
-
-    <div class="js-curl-container">
-        <hr />
-        <h4>CURL Command</h4>
-        <p class="js-curl-copy-msg">Copy and paste the following CURL command into your terminal to send a push message to your browser.</p>
-        <p class="js-curl-error-msg"></p>
-        <pre class="snippet-code"><code class="code-example js-curl-code language-markup"></code></pre>
-    </div>
-
-    <div class="js-api-request">
-        <hr />
-        <h4>Push from a Server</h4>
-        <p>
-            To send a push message to this page, you need to make a network request from your server with
-            the following pieces of info (this is essentially a breakdown of the CURL command above):
-        </p>
-        <h5>Endpoint URL</h5>
-        <pre><code class="js-endpoint"></code></pre>
-
-        <h5>Headers</h5>
-        <div class="js-headers-list">
-        </div>
-
-        <h5>Request Body</h5>
-        <p class="small-margin"><strong>Type</strong>: <span class="js-body-format"></span></p>
-        <p class="small-margin"><strong>Content</strong>: <span class="js-body-content"></span></p>
-        <hr />
-    </div>
+    <input class="sp_push_custom_data" type="hidden" name="dataName" value="Do you see my name">
+    <input class="sp_push_custom_data" type="hidden" name="dataBrowser" value="This might be a Chrome">
 
     <!--  Subscribe action -->
     <script>
@@ -88,8 +43,14 @@
                     userVisibleOnly: true,
                     applicationServerKey: "BAVIUVK1GtRFMFlbgd4vfHCnPrXIDiZmeSPohaAjHw2mE97d2X_kzLmFd_CLG7Ol5RAKP4a3MSaDhljLk1YX0F0"
                 });
-                // The push returns the answer of user and should be stored to your DB
+
+                // The subscribe push returns the answer of user and should be stored to your DB
+                // In the Push there is the Webserive Uri, the Key and Authorisation id
+                // Send extra data also to the database, like userid, browser, envrionment etc....
                 console.log(JSON.stringify(push));
+                console.log(dataName);
+                console.log(dataBrowser);
+
             } else {
                 console.log("In Safari. Still an issue...");
             }
@@ -101,9 +62,9 @@
         //if ("serviceWorker" in navigator) {
         addEventListener('load', async () => {
             let sw = await navigator.serviceWorker.register('./serviceworker.js');
-            console.log(sw);
+            console.log("registered to Service worker");
         });
-        //}
+            //}
     </script>
 
 </body>
