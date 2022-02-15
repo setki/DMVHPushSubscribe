@@ -47,12 +47,15 @@
                 // The subscribe push returns the answer of user and should be stored to your DB
                 // In the Push there is the Webserive Uri, the Key and Authorisation id
                 // Send extra data also to the database, like userid, browser, envrionment etc....
-                console.log(JSON.stringify(push));
-                console.log(dataName);
-                console.log(dataBrowser);
-
+                console.log("-----------------------------------------------------------------");
+                console.log("Push    = " + JSON.stringify(push));
+                console.log("Name    = " + dataName.value);
+                console.log("Browser = " + dataBrowser.value);
+                console.log("-----------------------------------------------------------------");
             } else {
+                console.log("-----------------------------------------------------------------");
                 console.log("In Safari. Still an issue...");
+                console.log("-----------------------------------------------------------------");
             }
 
         }
@@ -62,7 +65,10 @@
         //if ("serviceWorker" in navigator) {
         addEventListener('load', async () => {
             let sw = await navigator.serviceWorker.register('./serviceworker.js');
-            console.log("registered to Service worker");
+            console.log("-----------------------------------------------------------------");
+            console.log(">> Registered to Service worker");
+            console.log("sw = " + sw);
+            console.log("-----------------------------------------------------------------");
         });
             //}
     </script>
